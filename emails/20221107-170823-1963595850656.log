@@ -1,0 +1,15 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: renetflix@renetflix.com
+Date: Tue, 08 Nov 2022 01:08:23 -0000
+Message-ID: <166786970348.8140.9143448107000727807@LAPTOP-K3GKCVBT>
+
+Se Ha solicitado un cambio de contraseña para renetflix@renetflix.com. 
+Para continuar con el procesos de recuperación de contraseña, entra al enlace que aparece a continuación.
+
+ENLACE DE RECUPERACIÓN DE CONTRASEÑA:
+http://127.0.0.1:8000/password_reset_confirm/MQ/bej3lz-ff1c56c068bf31f3b9590f5b23f3b5d1/
+-------------------------------------------------------------------------------

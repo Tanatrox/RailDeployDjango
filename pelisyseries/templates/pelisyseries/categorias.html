@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %} Categorias {% endblock %}
+
+{% block content %}
+
+<div class="w-75 mx-auto my-5 container text-white">
+    <div class="d-flex justify-content-center">
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:accion' %}"><h1 class="fs-3 fw-bold">Acción</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:animacion' %}"><h1 class="fs-3 fw-bold">Animación</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:aventura' %}"><h1 class="fs-3 fw-bold">Aventura</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:terror' %}"><h1 class="fs-3 fw-bold">Terror</h1></a></div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:ciencia_ficcion' %}"><h1 class="fs-3 fw-bold">Ciencia Ficción</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:comedia' %}"><h1 class="fs-3 fw-bold">Comedia</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:drama' %}"><h1 class="fs-3 fw-bold">Drama</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:familiar' %}"><h1 class="fs-3 fw-bold">Familiar</h1></a></div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:fantasia' %}"><h1 class="fs-3 fw-bold">Fantasia</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:misterio' %}"><h1 class="fs-3 fw-bold">Misterio</h1></a></div>
+        <div class="bg-danger bg-gradient border border-danger rounded m-1 p-5 col-md-3 text-center"><a class="text-dark text-decoration-none" href="{% url 'pelisyseries:musicales' %}"><h1 class="fs-3 fw-bold">Musicales</h1></a></div>
+        <div class="m-1 p-5 col-md-3"></div>
+    </div>
+</div>
+<!-- <div class="contenedor-categorias">
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:accion' %}">Acción</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:animacion' %}">Animación</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:aventura' %}">Aventura</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:terror' %}">Terror</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:ciencia_ficcion' %}">Ciencia Ficción</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:comedia' %}">Comedia</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:drama' %}">Drama</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:familiar' %}">Familiar</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:fantasia' %}">Fantasia</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:misterio' %}">Misterio</a>
+    </div>
+    <div class="categorias">
+        <a href="{% url 'pelisyseries:musicales' %}">Musicales</a>
+    </div>
+</div> -->
+
+{% endblock %}

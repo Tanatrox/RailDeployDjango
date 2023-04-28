@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Renetflix {% endblock title %}
+
+{% block content %}
+
+    <div class="mx-auto my-5 container w-50">
+        <h1 class="fs-1 my-5 fw-bold text-white text-center">¡Bienvenido a Renetflix!</h1>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="{% url 'pelisyseries:login' %}" class="btn btn-danger btn-lg">Iniciar sesión</a>
+            <a href="{% url 'pelisyseries:register' %}" class="btn btn-danger btn-lg">Crear cuenta</a>
+        </div>
+    </div>
+
+{% endblock content %}

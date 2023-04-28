@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Recientes {% endblock %}
+
+{% block content %}
+
+<div class="mt-5 mb-5 h-100 container">
+    <div class="row">
+        {% for c in contenido %}
+            {% if c.estreno >= fecha %}
+                <div class="mt-1 mb-1 col-md-3">
+                    <a href="{% url 'pelisyseries:reproducir' c.id %}"><img class="rounded" width="320px" height="200px" src="{{ c.caratula.url }}"></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<!-- <div class="contenedor-index">
+    {% for c in contenido %}
+            <img src="{{ c.caratula.url }}" alt="" class="imagen-pelicula">
+    {% endfor %}
+</div> -->
+
+{% endblock %}

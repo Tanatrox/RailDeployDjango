@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Renetflix {% endblock title %}
+
+{% block content %}
+
+<div class="mt-5 mb-5 h-100 container">
+    <div class="row">  
+        <div class="me-1 mt-2 mb-1 col">
+            <img class="rounded" width="320px" height="420px" src="{{ contenido.caratula.url }}">
+        </div>
+        <div class="mb-1 col-md-7 text-white">
+            <h1 class="mb-3">{{contenido.nombre}}</h1>
+            <h3>Sinopsis:</h3>
+            <p>{{contenido.descripcion}}</p>
+            <p><b>Director:</b> {{contenido.director}}</p>
+            <p><b>Año:</b> {{contenido.anio}}</p>
+            <p><i class="fa-solid fa-thumbs-up"></i> {{contenido.me_gusta_total}}</p>
+        </div>
+        <div class="mb-1 col text-white">
+            <form action="{% url 'pelisyseries:me_gusta' contenido.id %}" method="POST">
+                {% csrf_token %}
+                {% if  not me_gusta %}
+                <button class="w-100 mb-1 me-1 btn btn-danger" type="submit" name="contenido_id" value="{{contenido.id}}"><i class="fa-solid fa-thumbs-up"></i> Me gusta</button>
+                {% else %}
+                <button class="w-100 mb-1 me-1 btn btn-danger" type="submit" name="contenido_id" value="{{contenido.id}}"><i class="fa-regular fa-thumbs-up"></i> Me gusta</button>
+                {% endif %}
+            </form>
+            <form action="{% url 'pelisyseries:favoritos' contenido.id %}" method="POST">
+                {% csrf_token %}
+                {% if not fav %}
+                <button class="w-100 mb-1 me-1 btn btn-danger" type="submit" name="contenido_id" value="{{contenido.id}}"><i class="fa-solid fa-heart"></i> Favoritos</button>
+                {% else %}
+                <button class="w-100 mb-1 me-1 btn btn-danger" type="submit" name="contenido_id" value="{{contenido.id}}"><i class="fa-regular fa-heart"></i> Favoritos</button>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+<div class="mt-5 mb-5 container">
+    <div class="row">
+        <div class="col">
+            <video class="w-100" src="{% static 'cuenta.mp4' %}" controls>
+    
+            </video>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Renetflix {% endblock title %}
+
+{% block content %}
+
+
+<div class="mt-5 mb-5 container">
+    <div class="row">
+        {% for c in contenido %}
+            <div class="mt-1 mb-1 col-md-3">
+                <a href="{% url 'pelisyseries:reproducir' c.id %}"><img class="rounded" width="320px" height="200px" src="{{ c.caratula.url }}"></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- <div class="contenedor-index">
+    {% for p in pelicula %}
+        <img src="{{ p.caratula.url }}" alt="" class="imagen-pelicula">
+    {% endfor %}
+
+    {% for s in serie %}
+        <img src="{{ s.caratula.url }}" alt="" class="imagen-serie">
+    {% endfor %}
+</div> -->
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Peliculas {% endblock %}
+
+{% block content %}
+
+<div class="mt-5 mb-5 h-100 container">
+    <div class="row">
+        {% for c in contenido %}
+            <div class="mt-1 mb-1 col-md-3">
+                <a href="{% url 'pelisyseries:reproducir' c.id %}"><img class="rounded" width="320px" height="200px" src="{{ c.caratula.url }}"></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
